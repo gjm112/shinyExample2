@@ -1,6 +1,11 @@
+titanic<-read.csv("/Users/gregorymatthews/Dropbox/shinyExample2/data/titanic.csv")
+
+
 shinyServer(function(input, output) {
 
-  
+  output$plot <- renderPlot({ 
+    hist(titanic$Age,main=input$text)
+  })
   
   output$text1 <- renderText({ 
     paste("You have selected", input$num)
@@ -9,6 +14,8 @@ shinyServer(function(input, output) {
   output$text2 <- renderText({ 
     paste("You have selected", input$text)
   })
+  
+  
   
   #################
   #Render functions

@@ -7,7 +7,8 @@ shinyUI(fluidPage(
   sidebarLayout(position="right",
     sidebarPanel("sidebar panel",
                  img(src = "Ramblers.png", height = 72, width = 72),
-                 textOutput("text1")),
+                 textOutput("text1")
+                 ),
     mainPanel(
         h1("Large Text"),
         h3("Smaller Text"),
@@ -36,10 +37,10 @@ shinyUI(fluidPage(
            checkboxInput("checkbox", label = "Choice A", value = TRUE)),
     
     column(3, 
-           checkboxGroupInput("checkGroup", 
+           checkboxGroupInput("checkSex", 
                               label = h3("Checkbox group"), 
-                              choices = list("Choice 1" = 1, 
-                                             "Choice 2" = 2, "Choice 3" = 3),
+                              choices = list("male" = 1, 
+                                             "femaile" = 2),
                               selected = 1)),
     
     column(3, 
@@ -90,6 +91,10 @@ shinyUI(fluidPage(
     column(3, 
            textInput("text", label = h3("Text input"), 
                      value = "Enter text..."))   
-  )
+  ),
+  
+  plotOutput("plot")
+  
+  
   
 ))
