@@ -1,10 +1,11 @@
 titanic<-read.csv("/Users/gregorymatthews/Dropbox/shinyExample2/data/titanic.csv")
 
 
-shinyServer(function(input, output) {
+shinyServer(
+  function(input, output) {
 
-  output$plot <- renderPlot({ 
-    hist(titanic$Age,main=input$text)
+  output$plot1 <- renderPlot({ 
+    plot(titanic$Age,titanic$Pclass, main = input$text)
   })
   
   output$text1 <- renderText({ 

@@ -93,7 +93,7 @@ shinyUI(fluidPage(
                      value = "Enter text..."))   
   ),
   
-  plotOutput("plot")
+  plotOutput("plot1")
   
   
   
