@@ -40,7 +40,7 @@ shinyUI(fluidPage(
            checkboxGroupInput("checkSex", 
                               label = h3("Checkbox group"), 
                               choices = list("male" = 1, 
-                                             "femaile" = 2),
+                                             "female" = 2),
                               selected = 1)),
     
     column(3, 
@@ -93,7 +93,8 @@ shinyUI(fluidPage(
                      value = "Enter text..."))   
   ),
   
-  plotOutput("plot1")
+  plotOutput("plot1"),
+  plotOutput("plot2")
   
   
   

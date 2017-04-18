@@ -8,6 +8,10 @@ shinyServer(
     plot(titanic$Age,titanic$Pclass, main = input$text)
   })
   
+  output$plot2 <- renderPlot({ 
+    hist(rnorm(input$slider1))
+  })
+  
   output$text1 <- renderText({ 
     paste("You have selected", input$num)
   })
